@@ -3,11 +3,22 @@
 
 #include "Production.h"
 
-int Production::someMethod(int a)
-{
-	return a - a;
-}
 
+std::vector<int> Production::inputNums(int t_numOfInputs)
+{
+	std::vector<int> temp_nums;
+
+	std::cout << "Please input " << t_numOfInputs << " numbers, between 1 - 46" << std::endl;
+	int temp_input;
+	for (size_t i = 0; i < t_numOfInputs; i++)
+	{
+		std::cout << "Num " << i + 1 << " : ";
+		std::cin >> temp_input;
+		temp_nums.push_back(temp_input);
+	}
+
+	return temp_nums;
+}
 
 //Checks if only 6 nums are entered
 bool Production::checkNumAmmount(std::vector<int> t_nums)

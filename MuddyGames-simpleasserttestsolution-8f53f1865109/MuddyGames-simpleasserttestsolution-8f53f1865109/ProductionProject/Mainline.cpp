@@ -1,12 +1,21 @@
 //@Author: Oisin Wilson
 //@StudentNum : C00213826
 
-#include "Production.h"
+#include <vector>
+#include <assert.h>
+#include "../ProductionProject/Production.h"
+
+using namespace std;
 
 
 int main()
 {
 	Production p;
-	p.someMethod(10);
-	return 0;
+	vector<int> m_nums = p.inputNums(6);
+
+	assert(p.checkNumAmmount(m_nums) == 1);
+	assert(p.betweenCheck(m_nums) == 1);
+	assert(p.repeatCheck(m_nums) == 1);
+
+	cin.get();
 }
